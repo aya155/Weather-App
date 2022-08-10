@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.WeatherApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/on_primary_variant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary_color</item>
+        <item name="colorSecondaryVariant">@color/on_secondary_variant</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/secondary_color</item>
+        <!-- Customize your theme here. -->
+        <!--SearchView query hint text color-->
+        <item name="android:textColorPrimary">@color/white</item>
+
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:fontFamily">@font/istok_web</item>
+
+    </style>
+
+<!--    &lt;!&ndash;SearchViewStyle &ndash;&gt;-->
+<!--    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">-->
+<!--        &lt;!&ndash;SearchView query text color&ndash;&gt;-->
+<!--        <item name="android:textColorPrimary">@color/black</item>-->
+
+<!--        &lt;!&ndash;SearchView query hint text color&ndash;&gt;-->
+<!--        <item name="android:textColorHint">@color/black</item>-->
+<!--    </style>-->
+
+    <style name="Theme.WeatherAppSplash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/secondary_color</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_icon_foreground</item>
+        <item name="windowSplashScreenAnimationDuration">10000</item>
+        <item name="postSplashScreenTheme">@style/Theme.WeatherApp</item>
+    </style>
+    <style name="BackgroundStyle" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:background">@drawable/morning_background</item>
+    </style>
+
+    <string name="mode">Day</string>
+</resources>

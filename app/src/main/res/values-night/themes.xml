@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.WeatherApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/night_primary</item>
+        <item name="colorPrimaryVariant">@color/night_on_primary</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/night_secondary</item>
+        <item name="colorSecondaryVariant">@color/night_on_secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
+        <!-- Customize your theme here. -->
+        <!--SearchView query hint text color-->
+        <item name="android:textColorPrimary">@color/white</item>
+
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:fontFamily">@font/istok_web</item>
+    </style>
+
+
+    <style name="Theme.WeatherAppSplash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/night_on_primary</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_icon_foreground</item>
+        <item name="windowSplashScreenAnimationDuration">10000</item>
+        <item name="postSplashScreenTheme">@style/Theme.WeatherApp</item>
+    </style>
+
+    <style name="BackgroundStyle" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:background">@drawable/evening_background</item>
+    </style>
+    <string name="mode">Night</string>
+
+</resources>
