@@ -36,8 +36,6 @@ import java.io.IOException
 
 
 class MainActivity : AppCompatActivity() {
-    val LOG_TAG: String = "MAIN_ACTIVITY"
-
     private lateinit var binding: ActivityMainBinding
     private val client by lazy { Client() }
     private var locationRequest: LocationRequest? = null
