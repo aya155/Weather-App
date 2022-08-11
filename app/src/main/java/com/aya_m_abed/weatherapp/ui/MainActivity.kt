@@ -11,6 +11,7 @@ import android.location.LocationManager
 import android.os.Build
 import android.os.Bundle
 import android.os.Looper
+import android.util.Log
 import android.view.View
 import androidx.annotation.Nullable
 import androidx.appcompat.app.AppCompatActivity
@@ -35,6 +36,8 @@ import java.io.IOException
 
 
 class MainActivity : AppCompatActivity() {
+    val LOG_TAG: String = "MAIN_ACTIVITY"
+
     private lateinit var binding: ActivityMainBinding
     private val client by lazy { Client() }
     private var locationRequest: LocationRequest? = null
@@ -286,8 +289,5 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
-
-
 
 }

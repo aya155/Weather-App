@@ -14,106 +14,94 @@ fun Double.roundToInteger(): Int {
 }
 
 fun ImageView.setWeatherIcon(weatherCode: Int, currentDayMode: String) {
-    val moonUrl = "https://i.ibb.co/qRvgyfk/Night.png"
-    val stormyUrl = "https://i.ibb.co/51CWXhm/Stormy.png"
-    val showerRainUrl = "https://i.ibb.co/R6LZQ67/Shower-Rain.png"
-    val rainDayUrl = "https://i.ibb.co/8dvkTxV/Rain.png"
-    val rainNightUrl = "https://i.ibb.co/RgSYhc0/Rain-night.png"
-    val snowUrl = "https://i.ibb.co/WyJnBdz/Snow-cloud.png"
-    val mistUrl = "https://i.ibb.co/G9RhsQH/mist.png"
-    val sunUrl = "https://i.ibb.co/6RHMs4V/Sunny.png"
-    val sunCloudDayUrl = "https://i.ibb.co/PTqYB9D/sun-cloud.png"
-    val sunCloudNightUrl = "https://i.ibb.co/WyfNgLs/sun-cloud-night.png"
-    val justCloudyUrl = "https://i.ibb.co/zb7JzGx/Just-Cloudy.png"
-    val brokenCloudsUrl = "https://i.ibb.co/HqpZHmB/broken-clouds.png"
 
     when {
         weatherCode / 100 == 2 -> {
-            Glide.with(this).load(stormyUrl)
+            Glide.with(this).load(Constants.STORMY)
                 .fitCenter()
                 .placeholder(R.drawable.ic_load_icon)
                 .error(R.drawable.ic_error_icon)
                 .into(this)
         }
         weatherCode / 100 == 3 -> {
-            Glide.with(this).load(showerRainUrl)
+            Glide.with(this).load(Constants.SHOWER_RAIN)
                 .fitCenter()
                 .placeholder(R.drawable.ic_load_icon)
                 .error(R.drawable.ic_error_icon)
                 .into(this)
         }
         currentDayMode == "Day" && weatherCode / 100 == 5 -> {
-            Glide.with(this).load(rainDayUrl)
+            Glide.with(this).load(Constants.RAIN_DAY)
                 .fitCenter()
                 .placeholder(R.drawable.ic_load_icon)
                 .error(R.drawable.ic_error_icon)
                 .into(this)
         }
         currentDayMode == "Night" && weatherCode / 100 == 5 -> {
-            Glide.with(this).load(rainNightUrl)
+            Glide.with(this).load(Constants.RAIN_NIGHT)
                 .fitCenter()
                 .placeholder(R.drawable.ic_load_icon)
                 .error(R.drawable.ic_error_icon)
                 .into(this)
         }
         weatherCode / 100 == 6 -> {
-            Glide.with(this).load(snowUrl)
+            Glide.with(this).load(Constants.SNOW)
                 .fitCenter()
                 .placeholder(R.drawable.ic_load_icon)
                 .error(R.drawable.ic_error_icon)
                 .into(this)
         }
         weatherCode / 100 == 7 -> {
-            Glide.with(this).load(mistUrl)
+            Glide.with(this).load(Constants.MIST)
                 .fitCenter()
                 .placeholder(R.drawable.ic_load_icon)
                 .error(R.drawable.ic_error_icon)
                 .into(this)
         }
         currentDayMode == "Day" && weatherCode == 800 -> {
-            Glide.with(this).load(sunUrl)
+            Glide.with(this).load(Constants.SUN)
                 .fitCenter()
                 .placeholder(R.drawable.ic_load_icon)
                 .error(R.drawable.ic_error_icon)
                 .into(this)
         }
         currentDayMode == "Night" && weatherCode == 800 -> {
-            Glide.with(this).load(moonUrl)
+            Glide.with(this).load(Constants.MOON)
                 .fitCenter()
                 .placeholder(R.drawable.ic_load_icon)
                 .error(R.drawable.ic_error_icon)
                 .into(this)
         }
         currentDayMode == "Day" && weatherCode == 801 -> {
-            Glide.with(this).load(sunCloudDayUrl)
+            Glide.with(this).load(Constants.SUN_CLOUD_DAY)
                 .fitCenter()
                 .placeholder(R.drawable.ic_load_icon)
                 .error(R.drawable.ic_error_icon)
                 .into(this)
         }
         currentDayMode == "Night" && weatherCode == 801 -> {
-            Glide.with(this).load(sunCloudNightUrl)
+            Glide.with(this).load(Constants.SUN_CLOUD_NIGHT)
                 .fitCenter()
                 .placeholder(R.drawable.ic_load_icon)
                 .error(R.drawable.ic_error_icon)
                 .into(this)
         }
         weatherCode == 802 -> {
-            Glide.with(this).load(justCloudyUrl)
+            Glide.with(this).load(Constants.JUST_CLOUDY)
                 .fitCenter()
                 .placeholder(R.drawable.ic_load_icon)
                 .error(R.drawable.ic_error_icon)
                 .into(this)
         }
         weatherCode == 803 -> {
-            Glide.with(this).load(brokenCloudsUrl)
+            Glide.with(this).load(Constants.BROKEN_CLOUDS)
                 .fitCenter()
                 .placeholder(R.drawable.ic_load_icon)
                 .error(R.drawable.ic_error_icon)
                 .into(this)
         }
         weatherCode == 804 -> {
-            Glide.with(this).load(brokenCloudsUrl)
+            Glide.with(this).load(Constants.BROKEN_CLOUDS)
                 .fitCenter()
                 .placeholder(R.drawable.ic_load_icon)
                 .error(R.drawable.ic_error_icon)

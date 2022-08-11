@@ -34,7 +34,7 @@ class DataManager(dataResponse: WeatherResponse?) {
     val feelsLikeValueRounded = currentDataResponse?.main?.feels_like?.getTemperatureRounded()
     val cityName = commonDataResponse?.name
     val countryName = commonDataResponse?.country
-    private val seaLevelValue = currentDataResponse?.main?.sea_level
+    val seaLevelValue = currentDataResponse?.main?.sea_level
     private val weatherDescription = currentDataResponse?.weather?.get(0)?.description
     private val airPressure = currentDataResponse?.main?.pressure
 
@@ -45,13 +45,13 @@ class DataManager(dataResponse: WeatherResponse?) {
 
     fun getWeatherDescriptionCapitalized() = weatherDescription?.capitalizeFirstLetterInEachWord()
 
-    fun getSeaLevelPressure() {
-        seaLevelValue?.convertPressureToPsiUnit()?.roundToInteger()?.toString()
+    fun getSeaLevelPressure(): String {
+        return seaLevelValue?.convertPressureToPsiUnit()?.roundToInteger().toString()
     }
 
 
-    fun getAirPressure() {
-        airPressure?.convertPressureToPsiUnit()?.roundToInteger().toString()
+    fun getAirPressure(): String {
+        return airPressure?.convertPressureToPsiUnit()?.roundToInteger().toString()
     }
 
 
